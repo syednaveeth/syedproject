@@ -1,0 +1,54 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <style>
+          .u{
+
+            background-color:green;
+            color: white;
+            border: none;
+            font-size: 15px;
+            border-radius: 3px;
+
+          }
+        </style>
+        <title>Document</title>
+    </head>
+    <body>
+      <p> Amazon calculater calculate the Order cost : </p>
+        <input class = "inputElement" placeholder="Enter a Amount"
+        onkeydown="calculate1(event);">
+        <button class="u" onclick="Calculate();"> calculate</button>
+        <p class="like"> </p>
+      <script>
+        function calculate1(event){
+        if(event.key === 'Enter')
+        {
+              Calculate();
+        }
+      }
+      function Calculate()
+      {
+        const total = document.querySelector('.inputElement');
+        let add = Number(total.value);
+        if( add < 40){
+            add=add+10;
+          document.querySelector('.like').innerHTML=`$${add}`;
+        } 
+        else (add>=40)
+        {
+          document.querySelector('.like').innerHTML=`$${add}`;
+        }
+        
+
+      }
+      
+      </script>
+
+    </body>
+    </html>
+
+
+
+
+    
